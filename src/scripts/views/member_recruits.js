@@ -20,8 +20,13 @@ var Marionette = require("backbone.marionette");
               {
                 recruit.member.rank = 'Rec.';
               }
-              if (! recruit.tp.id ) {recruit.tp.id = 99999;recruit.tp.tp = 'ID'};
-              if (! items[recruit.tp.id] ) items[recruit.tp.id] = {tp:recruit.tp.tp,recruits:[]};
+              if (! recruit.tp.id ) 
+              {
+                recruit.tp.id = 99999;
+                recruit.tp.tp = 'ID'
+              };
+              if (! items[recruit.tp.id] ) 
+                items[recruit.tp.id] = {tp:recruit.tp.tp,status:recruit.tp.active,recruits:[]};
               items[recruit.tp.id].recruits.push({
                 member: recruit.member,
                 enlistment: recruit.enl

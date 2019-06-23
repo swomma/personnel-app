@@ -42,8 +42,8 @@ var Marionette = require("backbone.marionette");
               rec_count++;
           });
           items.sort(function (a, b) {
-              if (a.tp < b.tp) return 1;
-              if (b.tp < a.tp) return -1;
+              if (parseInt(a.tp) < parseInt(b.tp)) return 1;
+              if (parseInt(b.tp) < parseInt(a.tp)) return -1;
               return 0;
           });
           _.each( items, function( recruiter, key ) {

@@ -4,7 +4,7 @@
         <h3>Total Recruits: <b>{{this.rec_count}}</b></h3>
         {{#each recruits}}
           {{#if this.tp }}    
-            <div class=""><b>{{ this.tp }}</b> ({{this.recruits.length}})</div>
+            <div class=""><b>{{ this.tp }}</b> ({{this.recruits.length}}) {{#is this.status "===" "1"}} &nbsp; <span class="label label-warning">TP not yet concluded</span> {{/is}}</div>
             {{#each recruits}}
               <div class="row">
                 <li class="">
