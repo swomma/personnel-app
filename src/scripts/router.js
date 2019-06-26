@@ -1327,6 +1327,7 @@ require("./validation.config");
 
               pageView = new MemberProfileView({
                   model: member,
+                  permissions: this.permissions,
                   finances: finances
               });
           }
